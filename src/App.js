@@ -1,10 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Lifecycle from "./Lifecycle";
+/* import FetchCard from "./FetchCard"; */
+/* import ResizeApp from "./ResizeApp"; */
 
 function App() {
+  const [show, setShow] = useState(false);
   return (
     <div>
-      App
+      <button onClick={() => setShow(!show)}>
+        Show
+      </button>
+      <Lifecycle />
+      {/* <FetchCard /> */}
+      {/* {show && <ResizeApp />} */}
     </div>
   );
 }
